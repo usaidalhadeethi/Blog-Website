@@ -1,11 +1,11 @@
 import React from 'react'
 
-const About = () => {
+const SideBar = () => {
     return (
         <div>
-            abouuuuuuuut !!
+            welcome side
         </div>
     )
 }
 
-export default About
+export default SideBar

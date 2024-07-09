@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Navbar = () => {
+const BlogCard = () => {
     return (
         <div>
-            i am navvv
+        
         </div>
     )
 }
 
-export default Navbar
+export default BlogCard

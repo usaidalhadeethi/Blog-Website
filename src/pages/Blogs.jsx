@@ -1,9 +1,12 @@
 import React from 'react'
+import BlogsBanner from '../components/Blog Page Components/BlogsBanner'
+import BlogsSection from '../components/Blog Page Components/BlogsSection'
 
 const Blogs = () => {
     return (
         <div>
-            <p>bloloooooog</p>
+            <BlogsBanner/>
+            <BlogsSection/>
         </div>
     )
 }
