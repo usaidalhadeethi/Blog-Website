@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import './navbar.css'
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -59,7 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-const pages = ['Home', 'Blog'];
+const pages = ['Home', 'Blog', 'Footer'];
 
 export default function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -74,7 +75,7 @@ export default function ResponsiveAppBar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" color='primary'>
                 <Toolbar>
                     <Typography
                         variant="h6"
@@ -89,7 +90,7 @@ export default function ResponsiveAppBar() {
                         variant="h6"
                         noWrap
                         component="div"
-                        sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+                        sx={{ mr: 2, fontWeight: 'bold', display: { xs: 'none', md: 'flex' } }}
                     >
                         UsBLOG
                     </Typography>
@@ -98,7 +99,9 @@ export default function ResponsiveAppBar() {
                         {pages.map((page) => (
                         <Button
                             key={page}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'white', display: 'block','&:hover': {color: '#FF5F00'} }}
+                            
+                        
                         >
                             {page}
                         </Button>

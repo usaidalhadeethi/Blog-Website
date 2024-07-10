@@ -1,11 +1,38 @@
-import React from 'react'
+import Grid from '@mui/material/Grid';
+import BlogCard from './BlogCard';  // Replace with the correct path to your BlogCard component
 
-const BlogCardsList = () => {
+const MyComponent = () => {
     return (
-        <div>
-            welcome Card
-        </div>
-    )
-}
+        <Grid container spacing={4}>
+            <Grid item xs={12} md={4}>
+                <BlogCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <BlogCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <BlogCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <BlogCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <BlogCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <BlogCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <BlogCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <BlogCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+                <BlogCard />
+            </Grid>
+        </Grid>
+    );
+};
 
-export default BlogCardsList
+export default MyComponent;

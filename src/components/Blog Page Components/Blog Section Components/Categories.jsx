@@ -1,11 +1,44 @@
-import React from 'react'
+import React from 'react';
+import { Box, Button } from '@mui/material';
 
 const Categories = () => {
-    return (
-        <div>
-        
-        </div>
-    )
-}
+    const categories = ['All', 'Security', 'AI', 'App', 'Tech'];
 
-export default Categories
+    return (
+        <Box
+            sx={{
+                display: 'flex',
+                justifyContent: {xs:'center', md:'start'},
+                flexWrap: 'wrap',
+                gap: 2,
+                p: 1,
+                borderBottom: '1px solid #b7b7b7',
+                marginTop: '45px',
+                marginLeft: {xs:'0', md:'8px'}
+            }}
+        >
+            {categories.map((category, index) => (
+                <Button
+                    key={index}
+                    sx={{
+                        py: 1,
+                        px: 2,
+                        bgcolor: '#007BFF',
+                        color: 'white',
+                        borderRadius: '2px',
+                        width: '110px',
+                        textAlign: 'center',
+                        fontWeight: 'bold',
+                        '&:hover': {
+                            bgcolor: '#0056b3',
+                        },
+                    }}
+                >
+                    {category}
+                </Button>
+            ))}
+        </Box>
+    );
+};
+
+export default Categories;
