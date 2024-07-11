@@ -23,14 +23,14 @@ const Categories = () => {
                     sx={{
                         py: 1,
                         px: 2,
-                        bgcolor: '#007BFF',
+                        background: 'linear-gradient(45deg, #003366, #006699)',
                         color: 'white',
                         borderRadius: '2px',
                         width: '110px',
                         textAlign: 'center',
                         fontWeight: 'bold',
                         '&:hover': {
-                            bgcolor: '#0056b3',
+                            background: 'linear-gradient(45deg, #002244, #004488)',
                         },
                     }}
                 >

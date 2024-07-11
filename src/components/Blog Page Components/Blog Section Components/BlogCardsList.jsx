@@ -3,7 +3,7 @@ import BlogCard from './BlogCard';  // Replace with the correct path to your Blo
 
 const MyComponent = () => {
     return (
-        <Grid container spacing={4}>
+        <Grid container spacing={3}>
             <Grid item xs={12} md={4}>
                 <BlogCard />
             </Grid>
