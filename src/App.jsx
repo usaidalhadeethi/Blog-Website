@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import './App.css'
 import Navbar from './components/Navbar && Footer/Navbar'
 import Footer from './components//Navbar && Footer/Footer'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Blogs from './pages/Blogs'
+import BlogsParent from './components/BlogsParent'
+import { SearchContext } from './assets/contexts/SearchContext';
+
 
 const theme = createTheme({
   palette: {
@@ -14,14 +15,17 @@ const theme = createTheme({
 });
 
 function App() {
+  const [searchInput, setSearchInput] = useState('');
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Navbar/>
-        <Blogs/>
-        <Footer/>
-      </ThemeProvider>
+      <SearchContext.Provider value={{searchInput, setSearchInput}}>
+        <ThemeProvider theme={theme}>
+          <Navbar/>
+          <BlogsParent/>
+          <Footer/>
+        </ThemeProvider>
+        </SearchContext.Provider>
     </>
   )
 }
