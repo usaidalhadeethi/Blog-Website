@@ -20,3 +20,5 @@ This project is a modern blog website designed to showcase articles in an aesthe
 ```
 https://usaidblog.netlify.app/
 ```
+
+![Screenshot 2024-07-16 174604](https://github.com/user-attachments/assets/97099878-4f43-4378-a409-3d600ec0f9a9)
