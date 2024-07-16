@@ -8,8 +8,8 @@ This project is a modern blog website designed to showcase articles in an aesthe
 
 ##Features
 
-    - **Responsive design for mobile and desktop views**
-    - **Category filtering**
+    - **Responsive design for mobile and desktop views**:fesgf
+    - **Category filtering**:gr
     - **Search functionality**
     - **Pagination for easy navigation through posts**
     - **Sidebar for additional content and categories**
