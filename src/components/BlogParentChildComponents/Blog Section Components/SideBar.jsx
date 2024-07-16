@@ -14,7 +14,7 @@ const SideBar = () => {
     }, [])
     return (
         // <Box sx={{ml: '175px'}}>
-        <Box sx={{mt: {xs:'50px', md:'0'}, px:{xs:'30px', md:0}}}>
+        <Box sx={{mt: {xs:'50px', md:'0'}, px:{xs:'15px', md:0}}}>
             <Typography variant='h4' sx={{mb: '18px', mt: '-8px'}}>
                 Latest Blogs
             </Typography>
