@@ -11,7 +11,7 @@ This project is a modern blog website designed to showcase articles in an aesthe
 - **Search functionality**
 - **Pagination for easy navigation through posts**
 - **Sidebar for additional content and categories**
-- **Fetches blog data from a backend server**
+- **Fetches blog data from a json file using AJAX**
 - **Smooth user experience with animations**
 
 # Netlify Link :
