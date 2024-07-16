@@ -12,7 +12,6 @@ const Categories = ({selectedCategory ,setSelectedCategory }) => {
         gap: 2,
         p: 1,
         borderBottom: '1px solid #b7b7b7',
-        marginTop: '45px',
         marginLeft: {xs: '0', md: '8px'}
       }}
     >
