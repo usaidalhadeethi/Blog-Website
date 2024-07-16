@@ -1,10 +1,9 @@
 import { useEffect, useState, useContext } from 'react';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import BlogCard from './BlogCard';
 import axios from 'axios';
 import Categories from './Categories';
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import { SearchContext } from '../../../assets/contexts/SearchContext';
 import Pagination from './Pagination';
 
@@ -24,9 +23,10 @@ const BlogCardsList = () => {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/blogs')
+    axios.get('/blogsData.json')
       .then(response => {
         setBlogs(response.data);
+        setCurrentPage(1);
       })
       .catch(error => {
         console.error('Error fetching blogs:', error);
@@ -36,10 +36,8 @@ const BlogCardsList = () => {
   useEffect(() => {
     if (currentPage > totalPages) {
       setCurrentPage(totalPages);
-    } else if (currentPage < 1) {
-      setCurrentPage(1);
     }
-  }, [totalPages, currentPage]);
+  }, [totalPages]);
 
   const currentItems = filteredBlogs.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
@@ -56,13 +54,23 @@ const BlogCardsList = () => {
         {currentItems.length > 0 ? (
           currentItems.map((blog, index) => (
             <Grid item xs={12} md={4} key={index}>
-              <BlogCard
-                id={blog.id}
-                title={blog.title}
-                author={blog.author}
-                published_date={blog.published_date}
-                image={blog.image}
-              />
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  '@media (max-width: 600px)': {
+                    justifyContent: 'center',
+                  },
+                }}
+              >
+                <BlogCard
+                  id={blog.id}
+                  title={blog.title}
+                  author={blog.author}
+                  published_date={blog.published_date}
+                  image={blog.image}
+                />
+              </Box>
             </Grid>
           ))
         ) : (

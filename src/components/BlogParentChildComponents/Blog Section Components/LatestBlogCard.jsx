@@ -1,7 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
-import React from 'react'
 
 const LatestBlogCard = ({title, id}) => {
     return (

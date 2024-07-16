@@ -13,7 +13,12 @@ const router = createBrowserRouter([
   {
     path: "/blogs/:id",
     element: <SingleBlog />,
-    loader: ({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`).then(res => res.json()),
+    loader: async ({ params }) => {
+      const response = await fetch('/blogsData.json');
+      const blogs = await response.json();
+      const blog = blogs.find(blog => blog.id === parseInt(params.id));
+      return { blog };
+    },
   },
 ]);
 

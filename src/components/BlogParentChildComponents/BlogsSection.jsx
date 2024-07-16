@@ -8,7 +8,7 @@ const BlogsSection = () => {
       id="BlogsSection"
       sx={{
         maxWidth: '100%',
-        marginTop: '20px',
+        // marginTop: '20px',
         [`@media (min-width: 600px)`]: {
           maxWidth: '90%',
         },

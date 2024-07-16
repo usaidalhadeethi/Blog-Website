@@ -8,10 +8,14 @@ const SideBar = () => {
     const [latestBlogs, setLatestBlogs] = useState([]);
     
     useEffect(() => {
-        axios.get('http://localhost:5000/blogs')
-        .then(response => {setLatestBlogs(response.data)})
-        .catch(error => {console.log('Error fetching latest blogs: ',error)} )
-    }, [])
+        axios.get('/blogsData.json') 
+            .then(response => {
+                setLatestBlogs(response.data);
+            })
+            .catch(error => {
+                console.log('Error fetching latest blogs: ', error);
+            });
+    }, []);
     return (
         // <Box sx={{ml: '175px'}}>
         <Box sx={{mt: {xs:'50px', md:'0'}, px:{xs:'15px', md:0}}}>
