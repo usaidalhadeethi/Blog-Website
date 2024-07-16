@@ -1,6 +1,6 @@
 # Blog Website
 
-A responsive and feature-rich blog website built with React, Axios, jQuery, Tailwind CSS, and Material-UI.
+A responsive and feature-rich blog website built with React, Axios, Tailwind CSS, and Material-UI.
 
 ## Introduction
 
@@ -15,3 +15,8 @@ This project is a modern blog website designed to showcase articles in an aesthe
 - **Sidebar for additional content and categories**
 - **Fetches blog data from a backend server**
 - **Smooth user experience with animations**
+
+# Netlify Link :
+```
+https://usaidblog.netlify.app/
+```
